@@ -277,13 +277,13 @@ HIGHLIGHTS SECTION
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
   padding: 0 24px;
   width: calc(100% / 3);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -309,6 +309,7 @@ HIGHLIGHTS SECTION
 .highlight__subtitle {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /*
@@ -422,6 +423,31 @@ MEDIA TAGS
 
 */
 
+/* SMALL PHONE, TABLETS, LARGE SMARTPHONES */
+
+@media(max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%;
+  }
+}
+
+/* SMALL PHONES, LARGE PHONES */
 @media(max-width: 550px) {
   .nav__links {
     display: none;
@@ -429,5 +455,13 @@ MEDIA TAGS
 
   .btn__menu {
   display: block;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+
+  .highlight:not(:last-child) {
+    margin-bottom: 24px;
   }
 }
